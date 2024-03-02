@@ -1,4 +1,5 @@
 import styled, { css } from "styled-components";
+import { fadeIn } from "./anim";
 
 const buttonAndInputStyles = css`
   padding: 12px 15px;
@@ -9,6 +10,7 @@ const buttonAndInputStyles = css`
 
 const SearchContainer = styled.div`
   display: flex;
+  animation: ${fadeIn} 0.5s ease-out;
   justify-content: center;
   margin-top: 30px;
 `;
@@ -40,6 +42,7 @@ const VideoList = styled.div`
   gap: 25px;
   padding: 25px;
   justify-items: center;
+  animation: ${fadeIn} 0.5s ease-out;
 `;
 
 const VideoItem = styled.div`

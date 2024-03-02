@@ -1,4 +1,5 @@
 import styled, { css } from "styled-components";
+import { fadeIn } from "./anim";
 
 const sharedMarginTop = css`
   margin-top: 24px;
@@ -11,6 +12,7 @@ const Container = styled.div`
   background-color: #f8f9fa;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
+  animation: ${fadeIn} 0.5s ease-in;
 `;
 
 const VideoWrapper = styled.div`
