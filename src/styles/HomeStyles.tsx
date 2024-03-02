@@ -1,33 +1,44 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
+
+const buttonAndInputStyles = css`
+  padding: 12px 15px;
+  border-radius: 8px;
+  border: 2px solid #ddd;
+  font-size: 16px;
+`;
 
 const SearchContainer = styled.div`
   display: flex;
   justify-content: center;
-  margin-top: 20px;
+  margin-top: 30px;
 `;
 
 const SearchInput = styled.input`
-  padding: 10px;
-  margin-right: 10px;
-  width: 300px;
-  border-radius: 5px;
-  border: 1px solid #ccc;
+  ${buttonAndInputStyles}
+  margin-right: 12px;
+  width: 320px;
+  &:focus {
+    border-color: #aaa;
+    outline: none;
+  }
 `;
 
 const SearchButton = styled.button`
-  padding: 10px;
-  border-radius: 5px;
+  ${buttonAndInputStyles}
   cursor: pointer;
-  background-color: blue;
+  background-color: #007bff;
   color: white;
   border: none;
+  &:hover {
+    background-color: #0056b3;
+  }
 `;
 
 const VideoList = styled.div`
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  gap: 20px;
-  padding: 20px;
+  gap: 25px;
+  padding: 25px;
   justify-items: center;
 `;
 
@@ -36,12 +47,13 @@ const VideoItem = styled.div`
   flex-direction: column;
   cursor: pointer;
   width: 100%;
-  border-radius: 5px;
+  border-radius: 8px;
   overflow: hidden;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.2s ease-in-out;
 
   &:hover {
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
   }
 
   img {
@@ -51,9 +63,10 @@ const VideoItem = styled.div`
   }
 
   p {
-    padding: 10px;
+    padding: 12px;
     margin: 0;
-    background-color: #fff;
+    background-color: #f8f9fa;
+    border-top: 1px solid #eee;
   }
 `;
 

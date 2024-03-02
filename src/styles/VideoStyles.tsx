@@ -1,14 +1,24 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
+
+const sharedMarginTop = css`
+  margin-top: 24px;
+`;
 
 const Container = styled.div`
   max-width: 1200px;
-  margin: 20px auto;
-  padding: 20px;
+  margin: 30px auto;
+  padding: 30px;
+  background-color: #f8f9fa;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
 `;
 
 const VideoWrapper = styled.div`
   position: relative;
   padding-top: 56.25%; /* 16:9 Aspect Ratio */
+  background-color: #000;
+  overflow: hidden;
+  border-radius: 8px;
 `;
 
 const VideoIframe = styled.iframe`
@@ -21,50 +31,16 @@ const VideoIframe = styled.iframe`
 `;
 
 const VideoTitle = styled.h2`
-  margin-top: 20px;
+  ${sharedMarginTop}
+  font-size: 22px;
+  color: #333;
 `;
 
 const VideoDescription = styled.p`
-  margin-top: 10px;
-`;
-
-// export { Container, VideoWrapper, VideoIframe, VideoTitle, VideoDescription };
-
-const OtherVideo = styled.div`
-  width: 100%;
-  display: flex;
-`;
-
-const OtherVideoIframe = styled.iframe`
-  height: 200px;
-`;
-
-const OtherVideoWrapper = styled.div`
-  margin-left: 20px;
-  height: 600px;
-  flex: 1;
-  background-color: lightgray;
-  overflow-y: scroll;
-`;
-
-const OtherVideoTitle = styled.h2`
-  margin-top: 4px;
+  ${sharedMarginTop}
   font-size: 16px;
+  color: #666;
+  line-height: 1.5;
 `;
 
-const OtherVideoDescription = styled.p`
-  margin-top: 4px;
-`;
-
-export {
-  Container,
-  VideoWrapper,
-  VideoIframe,
-  VideoTitle,
-  VideoDescription,
-  OtherVideoWrapper,
-  OtherVideo,
-  OtherVideoIframe,
-  OtherVideoTitle,
-  OtherVideoDescription,
-};
+export { Container, VideoWrapper, VideoIframe, VideoTitle, VideoDescription };
