@@ -1,9 +1,9 @@
 import styled from "styled-components";
 
 const Container = styled.div`
+  max-width: 1200px;
   margin: 20px auto;
   padding: 20px;
-  display: flex;
 `;
 
 const VideoWrapper = styled.div`
@@ -28,10 +28,11 @@ const VideoDescription = styled.p`
   margin-top: 10px;
 `;
 
+// export { Container, VideoWrapper, VideoIframe, VideoTitle, VideoDescription };
+
 const OtherVideo = styled.div`
   width: 100%;
   display: flex;
-  margin-top: 20px;
 `;
 
 const OtherVideoIframe = styled.iframe`
@@ -42,7 +43,7 @@ const OtherVideoWrapper = styled.div`
   margin-left: 20px;
   height: 600px;
   flex: 1;
-  // background-color: lightgray;
+  background-color: lightgray;
   overflow-y: scroll;
 `;
 

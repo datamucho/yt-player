@@ -22,6 +22,7 @@ const HomePage = () => {
     setSearchTerm(term);
   };
 
+  console.log(searchTerm);
   const handleVideoSelect = (videoId: string) => {
     navigate(`/video/${videoId}/${searchTerm}`);
   };
